@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quadratic Calculator</title>
+</head>
+<body>
+    <h1>Welcome to the Quadratic Calculator</h1>
+    <p>Enter in your values for a,b,c and c from the general quadratic eqation ax<sup>2</sup>+bx+c</p>
+<div id="inputs">
+    <input type="text" placeholder="a"id=inputA>
+    <input type="text" placeholder="b" id="inputB">
+    <input type="text" placeholder="c" id="inputC">
+</div>
+<button id="solveButton">Solution</button>
+<script>
+    const solveButton=document.getElementById("solveButton");
+    solveButton.addEventListener("click",function(){
+    const inputA = document.getElementById("inputA").value;
+    const inputB = document.getElementById("inputB").value;
+    const inputC = document.getElementById("inputC").value;
+    console.log(inputA, inputB, inputC);
+    const root1= -(inputB)+(Math.sqrt(Math.pow(inputB,2)-4*inputA*inputC))/(2*inputA)
+    const root2=  -(inputB) - (Math.sqrt(Math.pow(inputB, 2) - 4 * inputA * inputC)) / (2 * inputA)
+    console.log(root1)
+    console.log(root2)
+    })
+</script>
+</body>
+</html>
